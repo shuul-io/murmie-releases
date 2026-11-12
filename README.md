@@ -24,6 +24,19 @@ The script checks that the download matches its published checksum, that its cod
 brew install --cask shuul-io/tap/murmie
 ```
 
+## Network access
+
+Murmie works behind a firewall or proxy if these hosts are allowed:
+
+| Host | Used for |
+|---|---|
+| `murmie.com` | The update check (about once a day) |
+| `github.com` and the GitHub download host it redirects to | Downloads and updates |
+| `raw.githubusercontent.com` | The Terminal installer |
+| `huggingface.co` and its download servers | Speech and AI models, when you choose them |
+
+If you connect a cloud AI service, its address is needed too. Hugging Face hands model files to its own download servers, so the exact host can change.
+
 ## Updates
 
 Murmie checks for updates about once a day (Settings › About) and installs them itself.
